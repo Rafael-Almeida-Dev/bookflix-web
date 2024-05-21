@@ -1,19 +1,9 @@
-import { LoginScreen, RegisterScreen, ForgotPasswordScreen, ResetPasswordScreen } from '../screens'
-export const anauthRoutes = [
+import {
+  HomeScreen
+} from '../screens'
+export const authRoutes = [
   {
-    path: '/',
-    element: <LoginScreen />
-  },
-  {
-    path: '/signup',
-    element: <RegisterScreen />
-  },
-  {
-    path: '/forgot-password',
-    element: <ForgotPasswordScreen />
-  },
-  {
-    path: '/reset-password',
-    element: <ResetPasswordScreen />
+    path: '/home',
+    element: <HomeScreen />
   }
 ]
