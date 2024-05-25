@@ -13,4 +13,3 @@ export const getBooksByCategory = (id) =>
       Authorization: `bearer ${localStorage.getItem('@bookclub_token')}`
     }
   })
-
