@@ -11,9 +11,13 @@ import {
 export const BookDetailScreen = () => {
   const toast = useToast()
   const { id } = useParams()
-  const { data, refetch, isLoading } = useQuery(['bookDetail', id], () => getBookDetail(id), {
-    enabled: !!id
-  })
+  const { data, refetch, isLoading } = useQuery(
+    ['bookDetail', id],
+    () => getBookDetail(id),
+    {
+      enabled: !!id
+    }
+  )
 
   const addFavoriteMutation = useMutation((data) => addBookToFavorites(data), {
     onError: (error) => {
@@ -78,9 +82,12 @@ export const BookDetailScreen = () => {
     <Flex flexDir="column">
       <NavBar />
       <Flex
-        flexDir="row"
+        flexDir={['column', 'row']}
+        alignItems={['center', 'flex-start']}
+        justifyContent={['center', 'flex-start']}
         mt={['24px', '48px']}
         w="100%"
+        maxW="100vw"
         paddingX={['24px', '48px', '80px', '112px']}
       >
         <Flex
@@ -127,7 +134,12 @@ export const BookDetailScreen = () => {
             {data?.data?.book?.synopsis}
           </Text>
         </Flex>
-        <Flex>
+        <Flex
+          justifyContent={['center', 'flex-start']}
+          alignItems={['center', 'flex-start']}
+          w={['100%', 'auto']}
+          mt={['24px', '0px']}
+        >
           <Button
             isLoading={
               isLoading ||
