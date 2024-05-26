@@ -14,6 +14,8 @@ export const FavoritesScreen = () => {
         w="100%"
         mt={['24px', '48px']}
         paddingX={['24px', '48px', '80px', '112px']}
+       
+       
       >
         <Text.ScreenTitle>Favoritos</Text.ScreenTitle>
         <Flex
@@ -23,6 +25,8 @@ export const FavoritesScreen = () => {
           alignItems={['center', 'flex-start']}
           flexWrap="wrap"
           w="100%"
+          
+          
         >
           {data?.data?.map((item) => (
             <BookCard key={`book_favorite_${item.book.id}`} {...item.book} />
