@@ -17,7 +17,7 @@ export const HomeScreen = () => {
         <Flex
           w="100%"
           h="100%"
-          backgroundImage="url('/img/banner.svg')"
+          background="url('/img/banner.svg')"
           backgroundSize="cover"
           backgroundPosition={['start', 'center']}
           backgroundRepeat="no-repeat"

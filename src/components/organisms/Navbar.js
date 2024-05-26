@@ -11,10 +11,18 @@ export const NavBar = () => {
       paddingX={['24px', '48px', '80px', '112px']}
       paddingTop={['24px']}
     >
-      <Image src="/img/logo.svg" alt="BooKFlix Logo" w="160px" h="48px" />
-      <SearchBar />
-      
-      <UserMenu  />
+      <Image
+        src="/img/logo.svg"
+        alt="BooKFlix Logo"
+        w={['100px', '160px']}
+        h="48px"
+        cursor="pointer"
+      />
+      <Flex display={['none', 'flex']}>
+        <SearchBar />
+      </Flex>
+
+      <UserMenu />
     </Flex>
   )
 }
