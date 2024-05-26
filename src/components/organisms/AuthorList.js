@@ -22,12 +22,11 @@ export const AuthorList = ({  data, isLoading }) => {
             <Spinner />
           </Flex>
         )}
-        {!isLoading && data?.length === 0 || 
-        (!data && (
+        {((!isLoading && data?.length === 0) || !data) && (
           <Flex h="30px" alignItems="center" justifyContent="center">
             <Text>Nenhum autor relacionado encontrado</Text>
           </Flex>
-        ))}
+        )}
         {data &&
           data?.map((item) => <AuthorCard key={`author_${item.id}`} {...item} />)}
       </Flex>
