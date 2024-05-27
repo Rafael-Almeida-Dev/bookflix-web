@@ -52,6 +52,7 @@ export const UserModal = ({ onClose }) => {
       )
     }
   })
+
   const mutationAvatar = useMutation((data) => updateUserAvatar(data), {
     onError: (error) => {
       toast({
@@ -78,7 +79,6 @@ export const UserModal = ({ onClose }) => {
     }
   })
 
-  
   const { values, handleChange, errors, handleSubmit } = useFormik({
     initialValues: {
       name: userStore?.user?.name,
@@ -101,7 +101,6 @@ export const UserModal = ({ onClose }) => {
     const file = event?.target?.files[0]
     const type = file?.type
 
-    // conversao de arquivo base 64, img > string
     const reader = new FileReader()
     reader.readAsDataURL(file)
     reader.onload = () => {
@@ -111,7 +110,6 @@ export const UserModal = ({ onClose }) => {
         base64
       })
     }
-
   }
 
   return (
