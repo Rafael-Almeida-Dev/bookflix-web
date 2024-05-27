@@ -1,4 +1,11 @@
-import { HomeScreen, BookDetailScreen,FavoritesScreen, SearchScreen } from '../screens'
+import {
+  HomeScreen,
+  BookDetailScreen,
+  FavoritesScreen,
+  SearchScreen,
+  
+} from '../screens'
+
 export const authRoutes = [
   {
     path: '/home',

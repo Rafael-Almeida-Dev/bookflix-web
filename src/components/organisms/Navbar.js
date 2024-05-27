@@ -7,11 +7,10 @@ import { UserModal } from './UserModal'
 export const NavBar = ({ query, setQuery }) => {
   const [showModal, setShowModal] = useState()
   const navigate = useNavigate()
-  
-const onCloseModal  = () => {
-  setShowModal (null)
-}
 
+  const onCloseModal = () => {
+    setShowModal(null)
+  }
 
   return (
     <Flex
