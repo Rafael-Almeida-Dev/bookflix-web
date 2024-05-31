@@ -51,15 +51,16 @@ export const NavBar = ({ query, setQuery }) => {
         <Flex display={['none', 'flex']}>
           <SearchBar query={query} setQuery={setQuery} />
         </Flex>
+        <Flex>
+          <UserMenu onLogout={onLogout} setShowModal={setShowModal} />
 
-        <UserMenu onLogout={onLogout} setShowModal={setShowModal} />
-
-        {showModal === 'user' && <UserModal onClose={onCloseModal} />}
-        {showModal === 'password' && <PasswordModal onClose={onCloseModal} />}
-        {showModal === 'terms' && <TermsModal onClose={onCloseModal} />}
-        {showModal === 'privacy-policy' && (
-          <PrivacyPolicyModal onClose={onCloseModal} />
-        )}
+          {showModal === 'user' && <UserModal onClose={onCloseModal} />}
+          {showModal === 'password' && <PasswordModal onClose={onCloseModal} />}
+          {showModal === 'terms' && <TermsModal onClose={onCloseModal} />}
+          {showModal === 'privacy-policy' && (
+            <PrivacyPolicyModal onClose={onCloseModal} />
+          )}
+        </Flex>
       </Flex>
       <Flex
         mt="16px"
